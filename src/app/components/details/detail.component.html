@@ -1,0 +1,194 @@
+<div class="header">
+  <img src="assets/images/header.png"/>
+</div>
+<div class="content fcol">
+  <div class="back">
+  </div>
+  <div class="wrapper">
+    <div class="request-title">
+      <div class="title gtitle">Request ID : Adventure sunny beach</div>
+      <div class="sub-title">Fragrance proposal by Osmee - Validity date : 14/09/2023 - 17:16</div>
+    </div>
+  </div>
+  <div class="request-content frow">
+    <div class="left-part">
+      <div class="part-header">
+        Juillet 2023
+      </div>
+      <div class="border block-one">
+        <div class="line-info left-small frow">
+          <div class="line-text">Sunny blooms</div>
+          <mat-icon class="line-icon">edit</mat-icon>
+        </div>
+        <div class="line-info mar-top left-small">
+          <div class="info-subtitle">
+            Created:
+          </div>
+          <div class="line-text">06/09/2023</div>
+        </div>
+        <div class="line-info mar-xtop left-small">
+          <div class="info-subtitle">
+            Comment
+          </div>
+          <div class="line-longtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet imperdiet ex. Curabitur massa nibh, convallis eu pulvinar in, vulputate sed sapien. Sed a posuere ex. Aenean nisl purus, porta eu lacus consectetur, gravida elementum justo. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </div>
+        </div>
+      </div>
+      <div class="line-info frow line-border mar-top left-small">
+        <div class="info-title">
+          Basics
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-info mar-xtop line-border frow left-small">
+        <div class="info-title">
+          Olfaction
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-info mar-xtop line-border frow left-small">
+        <div class="info-title">
+          Cost & dosage
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-info mar-xtop line-border frow left-small">
+        <div class="info-title">
+          Norms
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-button">
+        <div class="button-title">
+          Cancel my request
+        </div>
+        <div class="button-icon">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="right-part">
+
+      <div class="loading" *ngIf="isLoading">
+        <mat-spinner [diameter]="24"></mat-spinner>
+      </div>
+
+      <div class="part-header" *ngIf="!isLoading">
+        Fragrance proposition
+        <div class="proposition border block-one" [@prop1]>
+          <div class="proposition-header">
+            <div class="proposition-title">
+              <div class="title-icon">
+                <img src="assets/images/proposition.png"/>
+              </div>
+              <div class="title-text">
+                <div class="text-alternate">Fragrance</div>
+                <div class="text-principal">Sunny blooms</div>
+              </div>
+            </div>
+            <div class="proposition-info">
+              <div class="score score-ok" (click)="goToPage()">
+                <div class="fit-score">Fit score: 86%</div>
+                <div class="predict-score">Predictive performance: High</div>
+              </div>
+              <div class="proposition-toggle">
+                <mat-icon>remove</mat-icon>
+              </div>
+            </div>
+          </div>
+          <div class="proposition-content">
+            <div class="section">
+              <div class="section-title">Comment</div>
+              <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet imperdiet ex. Curabitur massa nibh, convallis eu pulvinar in, vulputate sed sapien. Sed a posuere ex...</div>
+              <div class="section-more">More details...</div>
+            </div>
+            <div class="section multiple-section section-other">
+              <div class="section-left">
+                <div class="section-title">Unit price</div>
+                <div class="section-content">1,09 € (VAT exc./kg)</div>
+              </div>
+              <div class="section-right">
+                <div class="section-title t-center">Select quantity</div>
+                <div class="section-content section-quantity">
+                  <div class="btn-quantity btn-minus">
+                    <mat-icon>remove_circle</mat-icon>
+                  </div>
+                  <div class="qty-info">0</div>
+                  <div class="btn-quantity btn-plus">
+                    <mat-icon>add_circle</mat-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section section-other section-action">
+              <div class="section-global">Add sample to basket</div>
+              <div class="section-button">
+                <div class="button-title">
+                  Cancel my request
+                </div>
+                <div class="button-icon">
+                  <mat-icon>arrow_forward</mat-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proposition border block-one" [@prop2]>
+          <div class="proposition-header">
+            <div class="proposition-title">
+              <div class="title-icon">
+                <img src="assets/images/proposition2.png"/>
+              </div>
+              <div class="title-text">
+                <div class="text-main">Pine forest</div>
+              </div>
+            </div>
+            <div class="proposition-info">
+              <div class="score score-ok">
+                <div class="fit-score">Fit score: 86%</div>
+                <div class="predict-score">Predictive performance: High</div>
+              </div>
+              <div class="proposition-toggle">
+                <mat-icon>add</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proposition border block-one" [@prop3]>
+          <div class="proposition-header">
+            <div class="proposition-title">
+              <div class="title-icon">
+                <img src="assets/images/proposition3.png"/>
+              </div>
+              <div class="title-text">
+                <div class="text-main">Citrus fruits</div>
+              </div>
+            </div>
+            <div class="proposition-info">
+              <div class="score score-medium">
+                <div class="fit-score">Fit score: 64%</div>
+                <div class="predict-score">Predictive performance: Medium</div>
+              </div>
+              <div class="proposition-toggle">
+                <mat-icon>add</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <img src="assets/images/Footer1.png" />
+</div>

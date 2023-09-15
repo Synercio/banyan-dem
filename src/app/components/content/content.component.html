@@ -1,0 +1,233 @@
+<div class="header">
+  <img src="assets/images/header.png"/>
+</div>
+<div class="content fcol">
+  <div class="back">
+  </div>
+  <div class="wrapper">
+    <div class="request-title">
+      <div class="title gtitle">Request ID : Adventure sunny beach</div>
+      <div class="sub-title">Fragrance proposal by Osmee - Validity date : 14/09/2023 - 17:16</div>
+    </div>
+  </div>
+  <div class="request-content frow">
+    <div class="left-part">
+      <div class="part-header">
+        Juillet 2023
+      </div>
+      <div class="border block-one">
+        <div class="line-info left-small frow">
+          <div class="line-text">Sunny blooms</div>
+          <mat-icon class="line-icon">edit</mat-icon>
+        </div>
+        <div class="line-info mar-top left-small">
+          <div class="info-subtitle">
+            Created:
+          </div>
+          <div class="line-text">06/09/2023</div>
+        </div>
+        <div class="line-info mar-xtop left-small">
+          <div class="info-subtitle">
+            Comment
+          </div>
+          <div class="line-longtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet imperdiet ex. Curabitur massa nibh, convallis eu pulvinar in, vulputate sed sapien. Sed a posuere ex. Aenean nisl purus, porta eu lacus consectetur, gravida elementum justo. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </div>
+        </div>
+      </div>
+      <div class="line-info frow line-border mar-top left-small">
+        <div class="info-title">
+          Basics
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-info mar-xtop line-border frow left-small">
+        <div class="info-title">
+          Olfaction
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-info mar-xtop line-border frow left-small">
+        <div class="info-title">
+          Cost & dosage
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-info mar-xtop line-border frow left-small">
+        <div class="info-title">
+          Norms
+        </div>
+        <div class="line-icon">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+      </div>
+      <div class="line-button">
+        <div class="button-title">
+          Cancel my request
+        </div>
+        <div class="button-icon">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="right-part">
+
+      <div class="loading" *ngIf="isLoading">
+        <mat-spinner [diameter]="24"></mat-spinner>
+      </div>
+
+      <div class="part-header" *ngIf="!isLoading">
+        Test your creations on real customers
+        <div class="proposition border block-one" [@prop1]>
+          <div class="proposition-header">
+            <div class="proposition-title">
+              <div class="title-text">
+                <div class="text-main">Consumer testing</div>
+              </div>
+            </div>
+          </div>
+          <div class="proposition-content">
+            <div class="section">
+              <div class="section-content">
+                <div class="longtext">
+                  <p>
+                    Givaudan will test your 3 newly created fragrances on <span class="highlight">60 consumers</span> for only <span class="highlight">990 €</span>.<br/><br/>
+                    Please select targeting criterias here below:
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proposition border proposition-form proposition-other" [@prop2]>
+          <div class="proposition-content content-form">
+            <div class="section input-section">
+              <div class="input-title">
+                Gender:
+              </div>
+              <div class="input-control">
+                <div class="control-left">
+                  <div class="side-info">
+                    <div class="info-value">{{ manValue | number:'1.0-0' }}%</div>
+                    <div class="info-label">Man</div>
+                  </div>
+                </div>
+                <div class="control-content">
+                  <mat-slider color="primary" min="0" max="100" step="1" [(ngModel)]="sliderValue" (ngModelChange)="onSlide($event)"></mat-slider>
+                </div>
+                <div class="control-right">
+                  <div class="side-info">
+                    <div class="info-value">{{ womanValue | number:'1.0-0' }}%</div>
+                    <div class="info-label">Woman</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proposition border proposition-form proposition-other" [@prop3]>
+          <div class="proposition-content content-form">
+            <div class="section input-section">
+              <div class="input-title">
+                Age Range:
+              </div>
+              <div class="input-control">
+                <div class="control-entry">
+                  <mat-checkbox [(ngModel)]="range1" (change)="checkChanged($event)"></mat-checkbox>
+                  <div class="check-info">10-19</div>
+                  <div class="check-cal" *ngIf="isCheckCal && range1">{{ checkPercent | number:'1.0-0' }}%</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox [(ngModel)]="range2" (change)="checkChanged($event)"></mat-checkbox>
+                  <div class="check-info">20-29</div>
+                  <div class="check-cal" *ngIf="isCheckCal && range2">{{ checkPercent | number:'1.0-0' }}%</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox [(ngModel)]="range3" (change)="checkChanged($event)"></mat-checkbox>
+                  <div class="check-info">30-39</div>
+                  <div class="check-cal" *ngIf="isCheckCal && range3">{{ checkPercent | number:'1.0-0' }}%</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox [(ngModel)]="range4" (change)="checkChanged($event)"></mat-checkbox>
+                  <div class="check-info">40-49</div>
+                  <div class="check-cal" *ngIf="isCheckCal && range4">{{ checkPercent | number:'1.0-0' }}%</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox [(ngModel)]="range5" (change)="checkChanged($event)"></mat-checkbox>
+                  <div class="check-info">50-59</div>
+                  <div class="check-cal" *ngIf="isCheckCal && range5">{{ checkPercent | number:'1.0-0' }}%</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox [(ngModel)]="range6" (change)="checkChanged($event)"></mat-checkbox>
+                  <div class="check-info">60+</div>
+                  <div class="check-cal" *ngIf="isCheckCal && range6">{{ checkPercent | number:'1.0-0' }}%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proposition border proposition-form proposition-other" [@prop4]>
+          <div class="proposition-content content-form">
+            <div class="section input-section">
+              <div class="input-title">
+                 Attribute to test:
+              </div>
+              <div class="attribute-control">
+                <div class="control-entry">
+                  <mat-checkbox></mat-checkbox>
+                  <div class="check-info">Delightful</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Refreshing</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Natural</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">New & Different</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Familiar</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Old Fashioned</div>
+                </div>
+
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Modern</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Comforting</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Chemical</div>
+                </div>
+                <div class="control-entry">
+                  <mat-checkbox class="example-margin"></mat-checkbox>
+                  <div class="check-info">Weak</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <img src="assets/images/Footer1.png" />
+</div>

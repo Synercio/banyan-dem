@@ -1,0 +1,55 @@
+@font-face {
+  font-family: FuturaMed;
+  src:         url(assets/fonts/FuturaNowMedium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: FuturaReg;
+  src:         url(assets/fonts/FuturaNowRegular.otf) format("opentype");
+}
+
+* {
+  margin:      0;
+  padding:     0;
+  font-family: 'FuturaNowReg', sans-serif;
+}
+
+.mat-typography h1, .mat-typography h2, .mat-typography h3, .mat-typography h4, .mat-typography h5, .mat-typography h6 {
+  margin:      0;
+  padding:     0;
+  font-family: 'FuturaNowMed', sans-serif;
+}
+
+.gtitle {
+  font-family: FuturaMed, sans-serif;
+}
+
+html, body {
+  background-color: #E5E5E5;
+
+  width:            100vw;
+  height:           100vh;
+
+  min-width:        100vw;
+  min-height:       100vh;
+}
+
+.fcol {
+  flex:           1 1 auto;
+
+  display:        flex;
+  flex-direction: column;
+}
+
+.frow {
+  flex:    1 1 auto;
+  display: flex;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.header { background: white; }
+
+.footer { background: #35213F; }
